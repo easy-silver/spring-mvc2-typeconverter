@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                ${form.number}: <span th:text="${form.number}"></span>
+            </li>
+            <!-- ${{...}} 컨버터(포맷터) 적용 -->
+            <li>
+                ${{form.number}}: <span th:text="${{form.number}}"></span>
+            </li>
+            <li>
+                ${form.localDateTime}: <span th:text="${form.localDateTime}"></span>
+            </li>
+            <!-- ${{...}} 컨버터(포맷터) 적용 -->
+            <li>
+                ${{form.localDateTime}}: <span th:text="${{form.localDateTime}}"></span>
+            </li>
+        </ul>
+    </body>
+</html>
